@@ -6,10 +6,327 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuhOne</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer></script>
 </head>
 <body>
-    <h1>hi</h1>
+    <div class="container">
+         <header class="header">
+             <div class="header__logo">
+                <img class="header__logo-img" src="img/logo.svg" alt="logo">
+                <div class="header__logo-title">BuhOne</div>
+             </div>
+             <div class="header-menu">
+                <nav>
+                    <ul class="header-menu__top">
+                        <li>
+                            <a href="tel:+71112223344">
+								<img src="img/phone.png" alt="phone">
+								<span>8(111)222-33-44</span>
+							</a>
+                        </li>
+                        <li>
+                            <img src="img/clock.png" alt="time">
+                            <span>Пн-Пт 10:00-18:00</span>
+                        </li>
+                        <li>
+                            <a href="mailto:info@.ru">
+                                <img src="img/mail.png" alt="email">
+                                <span>order@buhone.ru</span>
+                            </a>
+                        </li>
+                        <li>
+                            <img src="img/placeholder.png" alt="place">
+                            <span>Невский пр. 130</span>
+                        </li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="header-menu__bottom">
+                        <li>
+                            <a href="#">главная</a>
+                        </li>
+                        <li>
+                            <a href="#">услуги</a>
+                        </li>
+                        <li>
+                            <a href="#">кейсы</a>
+                        </li>
+                        <li>
+                            <a href="#">о компании</a>
+                        </li>
+                        <li>
+                            <a href="#">контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+         </header>
+    </div>
+    <section class="banner">
+        <div class="container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <h1 class="title">
+                        Бухгалтерские услуги в Санкт-Петербурге
+                    </h1>
+                    <button class="button show">Связь с нами</button>
+                  </div>
+                  <div class="swiper-slide">
+                    <h1 class="title">
+                        Бухгалтерские услуги в Санкт-Петербурге
+                    </h1>
+                    <button class="button show">Связь с нами</button>
+                  </div>
+                  <div class="swiper-slide">
+                    <h1 class="title">
+                        Бухгалтерские услуги в Санкт-Петербурге
+                    </h1>
+                    <button class="button show">Связь с нами</button>
+                    
+                  </div>
+                  <div class="swiper-slide">
+                    <h1 class="title">
+                        Бухгалтерские услуги в Санкт-Петербурге
+                    </h1>
+                    <button class="button show">Связь с нами</button>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h4 class="sectionTitle">Наши услуги</h4>
+            <h3 class="title">Мы специализируемся</h3>
+            <div class="services__gallery">
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+                <div class="services__gallery-item">
+                    <img src="img/services.jpg" alt="services">
+                    <p class="services__item-content">Бухгалтерское обслуживание</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aboutUs">
+        <div class="container">
+            <div class="aboutUs-content">
+                <div class="aboutUs-content__description">
+                    <h4 class="sectionTitle">О нас</h4>
+                    <h3 class="title">
+                        Компания
+                        <span>ИвановПром</span>
+                    </h3>
+                    <p class="aboutUs-content__description-text">
+                        Lorem Ipsum - это текст-"рыба", часто 
+                        используемый в печати и вэб-дизайне. Lorem 
+                        Ipsum является стандартной "рыбой" для 
+                        текстов на латинице с начала XVI века. В то 
+                        время некий безымянный печатник создал 
+                        большую коллекцию размеров и форм шрифтов, 
+                        используя Lorem Ipsum для распечатки образцов.
+                         Lorem Ipsum не только успешно пережил без 
+                         заметных изменений пять веков, но и перешагнул 
+                         в электронный дизайн.
+                    </p>
+                </div>
+                <div class="aboutUs-content__deals">
+                    <div class="deals-item">
+                        <div class="count">
+                            <span>90</span>
+                            Завершено <br>крупных сделок
+                        </div>
+                        <a class="link" href="#">Все кейсы</a>
+                    </div>
+                    <div class="deals-item">
+                        <div class="count">
+                            <span>90</span>
+                            Завершено <br>крупных сделок
+                        </div>
+                        <a class="link" href="#">Все кейсы</a>
+                    </div>
+                    <div class="deals-item">
+                        <div class="count">
+                            <span>90</span>
+                            Завершено <br>крупных сделок
+                        </div>
+                        <a class="link" href="#">Все кейсы</a>
+                    </div>
+                    <div class="deals-item">
+                        <div class="count">
+                            <span>90</span>
+                            Завершено <br>крупных сделок
+                        </div>
+                        <a class="link" href="#">Все кейсы</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fotoGallery">
+        <div class="container">
+            <h3 class="title">Фотогаллерея</h3>
+            <div class="grid">
+                <figure class="fotoGallery__item1">
+                    <img class="img" src="img/image1.jpg">
+                </figure>
+                <figure class="fotoGallery__item2">
+                    <img class="img" src="img/image2.jpg">
+                </figure>
+                <figure class="fotoGallery__item3">
+                    <img class="img" src="img/image3.jpg">
+                </figure>
+                <figure class="fotoGallery__item4">
+                    <img class="img" src="img/image4.jpg">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container container-faq">
+            <h4 class="sectionTitle">FAQ</h4>
+            <h3 class="title">
+                Ответы на
+                <span>Вопросы</span>
+            </h3>
+            <div class="togglebox">
+                <input id="toggle1" type="radio" name="toggle" checked>
+                <label for="toggle1">Первый вопрос</label>
+                <div id="content1">
+                    <p>
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                    </p>
+                </div>
+                <input id="toggle2" type="radio" name="toggle">
+                <label for="toggle2">Второй вопрос</label>
+                <div id="content2">
+                    <p>
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                    </p>
+                </div>
+                <input id="toggle3" type="radio" name="toggle">
+                <label for="toggle3">Третий вопрос</label>
+                <div id="content3">
+                    <p>
+                        Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
+                    </p>
+                </div>
+             </div>
+         <img class="faq__img" src="img/img-faq.png">
+        </div>
+    </section>
+
+    <section class="contacts">
+        <div class="container">
+            <div class="contacts-wrapper">
+                <div class="left">
+                    <h3 class="title">Связь с нами</h3>
+                    <p class="contacts-text">
+                        У вас остались вопросы? Напишите нам - мы ответим в ближайшее время!
+                    </p>
+                    <div class="links">
+                        <a href="tel:+71112223344">
+                            <img src="img/phone-footer.png" alt="phone">
+                            <span>+7(111)222-33-44</span>
+                        </a>
+                        <a href="mailto:info@.ru">
+                            <img src="img/mail-footer.png" alt="email">
+                            <span>order@buhone.ru</span>
+                        </a>
+                    </div>
+                </div>
+                <div class=" right modal">
+                    <form method="POST">
+                        <div class="input-group">
+                            <div class="input-group__item">
+                                <label for="name">Имя</label>
+                                <input id="name" type="text" placeholder="Иван" required>
+                            </div>
+                            <div class="input-group__item">
+                                <label for="secName">Фамилия</label>
+                                <input id="secName" type="text" placeholder="Иванов" required>
+                            </div>
+                        </div>
+                        <div class="textarea">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                        </div>
+                       <div class="modal__button">
+                            <button class="button">Отправить сообщение</button>
+                       </div>
+                    </form>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    </section>
+    <!-- Модальное окно -->
+    <div class="modal-bg">
+        <div class="modal contact">
+            <span class="close"></span>
+             <form method="POST">
+                <h3>Связь с нами</h3>
+                <div class="input-group">
+                    <div class="input-group__item">
+                        <label for="name">Имя</label>
+                        <input id="name" type="text" placeholder="Иван" required>
+                    </div>
+                    <div class="input-group__item">
+                        <label for="secName">Фамилия</label>
+                        <input id="secName" type="text" placeholder="Иванов" required>
+                    </div>
+                </div>
+                <div class="textarea">
+                    <label for="message">Сообщение</label>
+                    <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                </div>
+               <div class="modal__button">
+                    <button class="button">Отправить сообщение</button>
+               </div>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-wrapper">
+                <div class="footer__left">2019 (с) Все права защищены. БухОне.ру </div>
+                <div class="footer__right"> Разработано: BuhOne</div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
