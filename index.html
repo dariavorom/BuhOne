@@ -51,20 +51,23 @@
                             <a href="#">главная</a>
                         </li>
                         <li>
-                            <a href="#">услуги</a>
+                            <a href="#services">услуги</a>
                         </li>
                         <li>
-                            <a href="#">кейсы</a>
+                            <a href="#deals">кейсы</a>
                         </li>
                         <li>
-                            <a href="#">о компании</a>
+                            <a href="#aboutUs">о компании</a>
                         </li>
                         <li>
-                            <a href="#">контакты</a>
+                            <a href="#contacts">контакты</a>
                         </li>
                     </ul>
                 </nav>
              </div>
+             <button class="burger" id="menu_Toggle" type="button">
+                <span class="burger_item">Menu</span>
+            </button>
          </header>
     </div>
     <section class="banner">
@@ -104,7 +107,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="container">
             <h4 class="sectionTitle">Наши услуги</h4>
             <h3 class="title">Мы специализируемся</h3>
@@ -137,7 +140,7 @@
         </div>
     </section>
 
-    <section class="aboutUs">
+    <section class="aboutUs" id="aboutUs">
         <div class="container">
             <div class="aboutUs-content">
                 <div class="aboutUs-content__description">
@@ -159,7 +162,7 @@
                          в электронный дизайн.
                     </p>
                 </div>
-                <div class="aboutUs-content__deals">
+                <div class="aboutUs-content__deals" id="deals">
                     <div class="deals-item">
                         <div class="count">
                             <span>90</span>
@@ -247,7 +250,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="container">
             <div class="contacts-wrapper">
                 <div class="left">
@@ -291,7 +294,16 @@
             <div id="map"></div>
         </div>
     </section>
-    <!-- Модальное окно -->
+    
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-wrapper">
+                <div class="footer__left">2019 (с) Все права защищены. БухОне.ру </div>
+                <div class="footer__right"> Разработано: BuhOne</div>
+            </div>
+        </div>
+    </footer>
+    <!-- Модальное окно с формой связи -->
     <div class="modal-bg">
         <div class="modal contact">
             <span class="close"></span>
@@ -317,14 +329,11 @@
             </form>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container footer-container">
-            <div class="footer-wrapper">
-                <div class="footer__left">2019 (с) Все права защищены. БухОне.ру </div>
-                <div class="footer__right"> Разработано: BuhOne</div>
-            </div>
-        </div>
-    </footer>
+    <!-- Модальной окно с увеличенным изображением -->
+    <div class="modal-img">
+        <span class="close-img"></span>
+        <img id="zoom-img" alt="zoom" src="">
+    </div>
     <script src="js/app.js" defer></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

@@ -46,8 +46,35 @@ const swiper = new Swiper('.swiper-container', {
           balloonContent: 'Москва'
       });
       myMap.geoObjects.add(myPlacemark);
-
   }
+
+  // Zoom фотогалереи
+  const images = document.querySelectorAll('.img');
+  const zoomImg = document.querySelector('#zoom-img');
+  const modalImg = document.querySelector('.modal-img');
+  const closeImg = document.querySelector('.close-img');
+  images.forEach( function(item, index) {
+    item.addEventListener('click', function() {
+      modalImg.style.display = 'block';
+      zoomImg.src =`img/image${index+1}full.jpg`;
+    })
+  });
+  closeImg.addEventListener('click', () => {
+    modalImg.style.display = 'none';
+  })
+
+  // Меню-бургер 
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.header-menu');
+  burger.addEventListener('click', () => {
+    if (menu.style.display == 'flex') {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+    
+  })
+
 
 
   
