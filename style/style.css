@@ -709,13 +709,23 @@ input[type='radio'] {
         display: block;
     }
     .header-menu {
-        margin-top: 110px;
+        position: absolute;
+        width: 90%;
         flex-direction: unset;
-        justify-content: flex-end;
-        width: auto;
+        margin-top: 0;
+       justify-content: space-between;
         height: fit-content;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, .8);
+        border-radius: 5px;
         display: none;
+    }
+    .header {
+        height: auto; 
+        display: contents;
+        justify-content: inherit;
+    }
+    .header__logo {
+        justify-content: center;
     }
     .header-menu nav ul {
         display: block;
@@ -790,9 +800,6 @@ input[type='radio'] {
     }
 }
 @media (max-width: 660px) {
-    .header-menu {
-       flex-direction: column;
-    }
     .title, .modal h3, .services .title {
         font-size: 30px;
     }
@@ -815,6 +822,11 @@ input[type='radio'] {
 }
 
 @media (max-width: 500px) {
+    .header-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .banner {
         min-height: auto;
         height: 420px;
@@ -836,6 +848,9 @@ input[type='radio'] {
     }
     .contacts-text, .left a, .modal label {
         font-size: 12px;
+    }
+    .contacts-text {
+        margin: 50px 5px 50px 0;
     }
     .left a, .left a img {
         margin-right: 5px;
