@@ -5,71 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuhOne</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="font/stylesheet.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript" defer></script>
 </head>
 <body>
-    <div class="container">
-         <header class="header">
-             <div class="header__logo">
-                <img class="header__logo-img" src="img/logo.svg" alt="logo">
-                <div class="header__logo-title">BuhOne</div>
-             </div>
-             <div class="header-menu">
-                <nav>
-                    <ul class="header-menu__top">
-                        <li>
-                            <a href="tel:+71112223344">
-								<img src="img/phone.png" alt="phone">
-								<span>8(111)222-33-44</span>
-							</a>
-                        </li>
-                        <li>
-                            <img src="img/clock.png" alt="time">
-                            <span>Пн-Пт 10:00-18:00</span>
-                        </li>
-                        <li>
-                            <a href="mailto:info@.ru">
-                                <img src="img/mail.png" alt="email">
-                                <span>order@buhone.ru</span>
-                            </a>
-                        </li>
-                        <li>
-                            <img src="img/placeholder.png" alt="place">
-                            <span>Невский пр. 130</span>
-                        </li>
-                    </ul>
-                </nav>
-                <nav>
-                    <ul class="header-menu__bottom">
-                        <li>
-                            <a href="#">главная</a>
-                        </li>
-                        <li>
-                            <a href="#services">услуги</a>
-                        </li>
-                        <li>
-                            <a href="#deals">кейсы</a>
-                        </li>
-                        <li>
-                            <a href="#aboutUs">о компании</a>
-                        </li>
-                        <li>
-                            <a href="#contacts">контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-             </div>
-             <button class="burger" id="menu_Toggle" type="button">
-                <span class="burger_item">Menu</span>
-            </button>
-         </header>
-    </div>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header__logo">
+                    <img class="header__logo-img" src="img/logo.svg" alt="logo">
+                    <div class="header__logo-title">BuhOne</div>
+                 </div>
+                <div class="header-menu">
+                    <nav class="nav-top">
+                        <ul class="header-menu__top">
+                            <li>
+                                <a href="tel:+71112223344">
+                                    <img src="img/phone.png" alt="phone">
+                                    <span>8(111)222-33-44</span>
+                                </a>
+                            </li>
+                            <li>
+                                <img src="img/clock.png" alt="time">
+                                <span>Пн-Пт 10:00-18:00</span>
+                            </li>
+                            <li>
+                                <a href="mailto:info@.ru">
+                                    <img src="img/mail.png" alt="email">
+                                    <span>order@buhone.ru</span>
+                                </a>
+                            </li>
+                            <li>
+                                <img src="img/placeholder.png" alt="place">
+                                <span>Невский пр. 130</span>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="nav-bottom">
+                        <ul class="header-menu__bottom">
+                            <li>
+                                <a href="#">главная</a>
+                            </li>
+                            <li>
+                                <a href="#services">услуги</a>
+                            </li>
+                            <li>
+                                <a href="#deals">кейсы</a>
+                            </li>
+                            <li>
+                                <a href="#aboutUs">о компании</a>
+                            </li>
+                            <li>
+                                <a href="#contacts">контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <button class="burger" id="menu_Toggle" type="button">
+                    <span class="burger_item">Menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
     <section class="banner">
         <div class="container">
             <div class="swiper-container">
@@ -113,27 +114,27 @@
             <h3 class="title">Мы специализируемся</h3>
             <div class="services__gallery">
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
                 <div class="services__gallery-item">
-                    <img src="img/services.jpg" alt="services">
+                    <img data-src="img/services.jpg" alt="services">
                     <p class="services__item-content">Бухгалтерское обслуживание</p>
                 </div>
             </div>
@@ -201,16 +202,16 @@
             <h3 class="title">Фотогаллерея</h3>
             <div class="grid">
                 <figure class="fotoGallery__item1">
-                    <img class="img" src="img/image1.jpg">
+                    <img class="img" data-src="img/image1.jpg">
                 </figure>
                 <figure class="fotoGallery__item2">
-                    <img class="img" src="img/image2.jpg">
+                    <img class="img" data-src="img/image2.jpg">
                 </figure>
                 <figure class="fotoGallery__item3">
-                    <img class="img" src="img/image3.jpg">
+                    <img class="img" data-src="img/image3.jpg">
                 </figure>
                 <figure class="fotoGallery__item4">
-                    <img class="img" src="img/image4.jpg">
+                    <img class="img" data-src="img/image4.jpg">
                 </figure>
             </div>
         </div>
@@ -246,7 +247,7 @@
                     </p>
                 </div>
              </div>
-         <img class="faq__img" src="img/img-faq.png">
+         <img class="faq__img" data-src="img/img-faq.png">
         </div>
     </section>
 
@@ -311,17 +312,17 @@
                 <h3>Связь с нами</h3>
                 <div class="input-group">
                     <div class="input-group__item">
-                        <label for="name">Имя</label>
-                        <input id="name" type="text" placeholder="Иван" required>
+                        <label for="name2">Имя</label>
+                        <input id="name2" type="text" placeholder="Иван" required>
                     </div>
                     <div class="input-group__item">
-                        <label for="secName">Фамилия</label>
-                        <input id="secName" type="text" placeholder="Иванов" required>
+                        <label for="secName2">Фамилия</label>
+                        <input id="secName2" type="text" placeholder="Иванов" required>
                     </div>
                 </div>
                 <div class="textarea">
-                    <label for="message">Сообщение</label>
-                    <textarea id="message" placeholder="Ваше сообщение"></textarea>
+                    <label for="message2">Сообщение</label>
+                    <textarea id="message2" placeholder="Ваше сообщение"></textarea>
                 </div>
                <div class="modal__button">
                     <button class="button">Отправить сообщение</button>
@@ -335,7 +336,7 @@
         <img id="zoom-img" alt="zoom" src="">
     </div>
     <script src="js/app.js" defer></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js" ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
 </body>
 </html>

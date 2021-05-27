@@ -1,3 +1,9 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
+
+
 // Слайдер
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
@@ -65,15 +71,54 @@ const swiper = new Swiper('.swiper-container', {
 
   // Меню-бургер 
   const burger = document.querySelector('.burger');
-  const menu = document.querySelector('.header-menu');
+  const menu = document.querySelector('.nav-bottom');
   burger.addEventListener('click', () => {
-    if (menu.style.display == 'flex') {
-      menu.style.display = 'none';
+    if (menu.style.height == '150px' && menu.style.opacity == '1') {
+      menu.style.height = '0';
+      menu.style.opacity = '0';
     } else {
-      menu.style.display = 'flex';
+      menu.style.height = '150px';
+      menu.style.opacity = '1';
     }
-    
-  })
+  });
+
+
+//Ленивая загрузка
+
+const lazyImages = document.querySelectorAll('img[data-src]');
+const windowHeight = document.documentElement.clientHeight;
+let lazeImagesPositions = [];
+if (lazyImages.length > 0) {
+  lazyImages.forEach(img => {
+    if (img.dataset.src ) {
+      lazeImagesPositions.push(img.getBoundingClientRect().top + pageYOffset);
+      lazyScrollCheck();
+    }
+  });
+}
+
+window.addEventListener('scroll', lazyScroll);
+
+function lazyScroll () {
+  if (document.querySelectorAll('img[data-src]').length) {
+    lazyScrollCheck();
+  }
+}
+
+function lazyScrollCheck () {
+  let imgIndex = lazeImagesPositions.findIndex(
+    item => pageYOffset > item - windowHeight
+  );
+  console.log(imgIndex)
+  if (imgIndex >= 0) {
+    if (lazyImages[imgIndex].dataset.src) {
+      lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
+      console.log(lazyImages)
+      lazyImages[imgIndex].removeAttribute('data-src');
+    };
+    delete lazeImagesPositions[imgIndex];
+  };
+};
 
 
 

@@ -9,6 +9,14 @@ body {
 section {
     padding: 140px 0;
 }
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
 .container {
     max-width: 1130px;
     padding: 0 10px;
@@ -44,7 +52,7 @@ section {
     z-index: 1;
     justify-content: space-evenly;
 }
-.header-menu nav ul {
+.header-menu ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -60,7 +68,7 @@ section {
     line-height: 17px;
 }
 .header-menu__top img {
-    margin-right: 15px; 
+    margin-right: 15px;
     height: 17px;
 }
 .header-menu__bottom li {
@@ -179,19 +187,20 @@ section {
 }
 .input-group input {
     display: block;
-    padding: 15px 0;
+    padding: 10px 0;
     border: none;
     border-bottom: 1px solid black;
     width: 100%;
+    font-size: 21px;
 }
-input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 21px;
     line-height: 29px;
     color: #BDBDBD;
 }
-input::-moz-placeholder, textarea::-moz-placeholder { 
+input::-moz-placeholder, textarea::-moz-placeholder {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 21px;
@@ -205,7 +214,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     line-height: 29px;
     color: #BDBDBD;
 }
-input:-moz-placeholder, textarea:-moz-placeholder { 
+input:-moz-placeholder, textarea:-moz-placeholder {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 21px;
@@ -221,6 +230,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     padding: 0;
     resize: none;
     margin-bottom: 50px;
+    font-size: 21px;
 }
 .textarea label {
     display: block;
@@ -262,7 +272,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 .close-img:hover {
     transform: scale(1.5);
 }
-.close:before, .close:after, 
+.close:before, .close:after,
 .close-img:before, .close-img:after {
     content: '';
     position: absolute;
@@ -313,9 +323,9 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     margin-bottom: 15px;
 }
 .modal__button {
-   display: flex;
-   align-items: flex-end;
-   justify-content: flex-end;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 /* Услуги */
@@ -363,20 +373,20 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     color: #FFFFFF;
 }
 .services__gallery-item:after {
-	content: "";
-	opacity: 0;
-	transition: opacity 0.2s ease-in-out;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
 }
 .services__gallery-item:hover:after {
-	position: absolute;
-	top: 0;    
-	left: 0;   
-	display: block;
-	width: 100%;
-	height: 100%;    
-	background: transparent;
-	background-image:  linear-gradient(0deg, rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65)); 
-	opacity: 0.8;    
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image:  linear-gradient(0deg, rgba(0, 95, 163, 0.65), rgba(0, 95, 163, 0.65));
+    opacity: 0.8;
 }
 /* О нас */
 .aboutUs .title, .faq .title {
@@ -524,7 +534,6 @@ input[type='radio'] {
     height: 77px;
     background: #EBEBEB;
     padding: 30px 30px 0 63px;
-    position: relative;
     border: 1px solid #FFFFFF;
 }
 .togglebox label::after {
@@ -552,7 +561,8 @@ input[type='radio'] {
     height: 130px;
     background: #005FA3;
     color: #FFFFFF;
-    padding: 0px 45px 30px 30px;
+    padding: 0px 45px 5px 30px;
+    overflow: overlay;
 }
 #toggle1:checked + label,
 #toggle2:checked + label,
@@ -611,6 +621,11 @@ input[type='radio'] {
     background: transparent;
     border-bottom: 1px solid #FFFFFF;
     color: #FFFFFF;
+}
+.right.modal .button {
+    background: #005FA3;
+    color: #FFFFFF;
+    border: none;
 }
 #map {
     height: 360px;
@@ -703,40 +718,28 @@ input[type='radio'] {
     .faq__img {
         display: none;
     }
-}   
+}
 @media (max-width: 900px) {
-    .burger {
-        display: block;
-    }
-    .header-menu {
-        position: absolute;
-        width: 90%;
-        flex-direction: unset;
-        margin-top: 0;
-       justify-content: space-between;
-        height: fit-content;
-        background: rgba(0, 0, 0, .8);
-        border-radius: 5px;
-        display: none;
-    }
     .header {
-        height: auto; 
+        height: auto;
         display: contents;
         justify-content: inherit;
+    }
+    .header-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
     }
     .header__logo {
         justify-content: center;
     }
     .header-menu nav ul {
-        display: block;
-        text-align: left;
-        margin-right: 25px;
+        padding: 10px 0 10px 0;
+        justify-content: space-around;
     }
     .header-menu nav ul li {
         padding: 5px 0;
-    }
-    .header-menu nav ul li a, .header-menu nav ul li span {
-        color: #fff;
     }
     .title {
         font-size: 40px;
@@ -761,8 +764,23 @@ input[type='radio'] {
     }
 }
 @media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    .header-menu {
+        width: 100%;
+        display: block;
+    }
+    .nav-bottom {
+        height: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .header-menu__top img {
+        margin-right: 5px;
+    }
     .swiper-button-prev, .swiper-button-next {
-     display: none !important;
+        display: none !important;
     }
     .services__gallery-item {
         width: 250px;
@@ -793,7 +811,7 @@ input[type='radio'] {
     .togglebox {
         width: auto;
     }
-    #toggle1:checked ~ #content1, 
+    #toggle1:checked ~ #content1,
     #toggle2:checked ~ #content2,
     #toggle3:checked ~ #content3 {
         height: auto;
@@ -805,6 +823,13 @@ input[type='radio'] {
     }
     .banner .title {
         width: auto;
+    }
+    .header-menu__top {
+        flex-wrap: wrap;
+    }
+    .header-menu__bottom {
+        flex-direction: column;
+        align-items: center;
     }
     .aboutUs-content {
         justify-content: center;
@@ -822,20 +847,29 @@ input[type='radio'] {
 }
 
 @media (max-width: 500px) {
-    .header-menu {
+    .header-menu nav ul {
+        padding: 0 10px 0 10px;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+    }
+    .header__logo {
+        justify-content: left;
     }
     .banner {
         min-height: auto;
         height: 420px;
     }
+    .banner .title {
+        margin: auto auto 50px auto;
+    }
     .swiper-slide {
-        padding: 80px 0 80px 0;
+        padding: 80px 0 70px 0;
     }
     section {
         padding: 50px 0;
+    }
+    .banner	.button {
+        width: 200px;
     }
     .contacts {
         padding: 50px 0 50px 0;
@@ -870,16 +904,21 @@ input[type='radio'] {
     input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         font-size: 16px;
     }
-    input::-moz-placeholder, textarea::-moz-placeholder { 
+    input::-moz-placeholder, textarea::-moz-placeholder {
         font-size: 16px;
     }
     input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         font-size: 16px;
     }
-    input:-moz-placeholder, textarea:-moz-placeholder { 
+    input:-moz-placeholder, textarea:-moz-placeholder {
         font-size: 16px;
     }
-}   
+    .right.modal .button {
+        font-size: 13px;
+        height: 50px;
+    }
+}
+
 @media (max-width: 320px) {
     .services .title, .aboutUs .title, .faq .title {
         margin-bottom: 30px;
@@ -891,4 +930,13 @@ input[type='radio'] {
         font-size: 12px;
         height: 60px;
     }
+}
+
+.message-success {
+    background: rgba(0, 128, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 3px;
 }
