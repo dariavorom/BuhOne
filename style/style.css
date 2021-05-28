@@ -49,7 +49,6 @@ img[data-src] {
     display: flex;
     flex-direction: column;
     width: 690px;
-    z-index: 1;
     justify-content: space-evenly;
 }
 .header-menu ul {
@@ -81,6 +80,27 @@ img[data-src] {
 .header-menu__bottom li a {
     color: #222222;
     text-decoration: none;
+    position: relative;
+}
+.header-menu__bottom li a:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .2s linear;
+}
+.header-menu__bottom li a:hover:before {
+    width: 100%;
+}
+ul li span {
+    transition: .2s linear;
+}
+ul li a span:hover {
+    color: #005FA3;
 }
 
 /* Banner */
@@ -327,7 +347,12 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     align-items: flex-end;
     justify-content: flex-end;
 }
-
+button {
+    transition: .3s linear;
+}
+button:hover {
+    background: #2079d0;
+}
 /* Услуги */
 .services {
     background: #EBEBEB;
@@ -457,7 +482,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     display: block;
     margin-top: 40px;
 }
-
 
 /* Фотогалерея */
 .fotoGallery {
@@ -622,11 +646,6 @@ input[type='radio'] {
     border-bottom: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
-.right.modal .button {
-    background: #005FA3;
-    color: #FFFFFF;
-    border: none;
-}
 #map {
     height: 360px;
     margin-top: 40px;
@@ -647,7 +666,24 @@ input[type='radio'] {
     display: flex;
     justify-content: space-between
 }
-
+.links a span {
+    position: relative;
+}
+.links a span:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #FFFFFF;
+    transition: width .3s linear;
+}
+.links a span:hover:before {
+    width: 100%;
+}
+/*Модальное с картинкой*/
 .modal-img {
     position: fixed;
     width: 95%;

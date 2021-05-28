@@ -73,7 +73,7 @@ const swiper = new Swiper('.swiper-container', {
   const burger = document.querySelector('.burger');
   const menu = document.querySelector('.nav-bottom');
   burger.addEventListener('click', () => {
-    if (menu.style.height == '150px' && menu.style.opacity == '1') {
+    if (menu.style.height === '150px' && menu.style.opacity === '1') {
       menu.style.height = '0';
       menu.style.opacity = '0';
     } else {
@@ -115,10 +115,10 @@ function lazyScrollCheck () {
       lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src;
       console.log(lazyImages)
       lazyImages[imgIndex].removeAttribute('data-src');
-    };
+    }
     delete lazeImagesPositions[imgIndex];
-  };
-};
+  }
+}
 
 
 
